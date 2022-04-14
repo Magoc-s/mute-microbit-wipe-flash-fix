@@ -10,6 +10,10 @@ After getting in contact with Carlos, a software engineer at the Microbit organi
 
 ## Instructions
 
+Step 0: Download the two `.hex` files in this repo. (`0255_kl27z_microbit_0x8000.hex` and `kl27z_microbit_if_crc-erase_target.hex`). This can be done by clicking on the file to view its contents, then click on the download button (the Down arrow pointing into a tray icon) in the top right of the file viewer. Do this for both files.
+
+![Screenshot of the download button location for files in gitlab.](https://gitlab.cecs.anu.edu.au/comp2300/2022/microbit-target-flash-wipe/raw/master/assets/readme_download.png "Download button on a gitlab file.")
+
 Step 1: Unplug the micro:bit, then, while holding the RESET button, plug it back in to enter MAINTENANCE mode. (You should see a 'MAINTENANCE' USB device appear.)
 
 Step 2: Drag the `kl27z_microbit_if_crc-erase_target.hex` file into the MAINTENANCE drive. You should see the activity via the yellow activity indicator LED on the microbit, then the device should disconnect and reconnect. You should see the microbit simply alternate between flashing the red and yellow LEDs.
