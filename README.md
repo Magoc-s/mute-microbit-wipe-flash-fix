@@ -1,10 +1,19 @@
 ## Why does this repo exist?
 
+This repository concerns an issue discovered in the "Computer Organisation and Program Execution (COMP2300)" course at the Australian National University.
+
 In Semester 1, 2022, it was noted that in the rare scenario a student wrote poor/buggy code that interacted with and modified a particular set of GPIO pins on port 0, the communication between the target MCU and the interface chip would be destroyed. This would result in the loss of the MICROBIT drive as the microbit would no longer identify itself as a USB device to computers. This would mean you couldn't upload new code to wipe the old, nefarious code!
 
 ## The solution
 
 After getting in contact with Carlos, a software engineer at the Microbit organisation via the DAPLink/PyOCD slack, a solution was developped: A custom interface firmware hex that simply initialises the device MCU then wipes the target flash. This would allow us to flash custom interface firmware to wipe the target flash, then reflash the actual interface firmware over the top and have a functioning micro:bit again!
+
+**Important!**  
+Neither of the hex files provided within this repository are created by the ANU or tutor team associated with the course.   
+`0255_kl27z_microbit_0x8000.hex` is sourced from the micro:bit website at: https://tech.microbit.org/software/daplink-interface/  
+`kl27z_microbit_if_crc-erase_target.hex` was written by Carlos Pereira Atencio from the Microbit organisation in response to this issue. Thanks again Carlos!  
+
+These files are only provided stand-alone in this repository so as to maintain a standard image for the firmware used in the course running forward. Again, these files are not created by the ANU and are thus the intellectual property of another party. We respect this and ask that you do the same.  
 
 ---
 
